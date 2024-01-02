@@ -1,14 +1,12 @@
+import Library from "@/icons/Library";
 import BibliaryItem from "./BibliaryItem";
-
+import { playlists } from "@/lib/data";
 export default function SideBibliary(){
     return(
         <ul className="bg-slate-400 dark:bg-zinc-900 flex flex-col gap-1 rounded p-2  flex-1">
-            <BibliaryItem key={crypto.randomUUID()} />
-            <BibliaryItem key={crypto.randomUUID()} />
-            <BibliaryItem key={crypto.randomUUID()} />
-            <BibliaryItem key={crypto.randomUUID()} />
-            <BibliaryItem key={crypto.randomUUID()} />
-            <BibliaryItem key={crypto.randomUUID()} />
+            <div className="flex gap-4 pb-4 px-2 truncate"><Library /> Tu Bilblioteca </div>
+            {playlists.map((playlist)=><BibliaryItem key={crypto.randomUUID()} playlist={playlist}/>  )}         
+            
         </ul>
     )
 }
