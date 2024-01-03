@@ -25,8 +25,10 @@ export default function RootLayout({
           <SideMenu />
           <SideBibliary />
         </aside>
-        <main className='[grid-area:main] bg-slate-400 dark:bg-zinc-900 rounded-lg'>
-          {children}
+        <main className='[grid-area:main] bg-slate-400 dark:bg-zinc-900 rounded-lg relative'>
+          <div className='absolute top-0 w-full h-full bg-gradient-to-t from-orange-100 to-orange-200/80'>
+            {children}
+          </div>
         </main>
         <footer className='[grid-area:footer] bg-slate-400 dark:bg-zinc-900 rounded-lg w-full h-10 flex justify-between place-items-center px-4'>
           <BarPlayer />

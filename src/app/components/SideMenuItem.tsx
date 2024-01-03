@@ -4,7 +4,6 @@ interface Props{
     href?:string
 }
 
-
 export default function SideMenuItem({ico=<></>,text,href=""}:Props){
     return(
         <a 
