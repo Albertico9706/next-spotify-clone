@@ -3,6 +3,7 @@ import './globals.css'
 import BarPlayer from './components/BarPlayer'
 import SideMenu from './components/SideMenu'
 import SideBibliary from './components/SIdeBlibliary'
+import { ThemeProvider } from "./components/themeProvider"
 
 
 
@@ -20,24 +21,33 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <script>
+       {/* if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.add('dark')
+      } else {
+      document.body.classList.remove('dark')
+      } */}</script>
+      
       <body 
-      className="[grid-template-areas:'aside_main'_'footer_footer'] bg-red-600 dark:bg-black dark:text-white 
+      className="[grid-template-areas:'aside_main'_'footer_footer'] bg-primary dark:bg-black dark:text-white 
       grid  h-screen  grid-rows-[1fr_auto] grid-cols-[minmax(150px,200px)_1fr]   gap-1">
         <aside className='[grid-area:aside] rounded-lg  flex flex-col gap-1 '>
           <SideMenu />
           <SideBibliary />
         </aside>
-        <main className='[grid-area:main]  dark:bg-zinc-900 rounded-lg relative'>
-          <div className='absolute top-0 w-full h-full bg-gradient-to-t from-orange-100 to-orange-200/80'>
+        <main className='[grid-area:main] bg-orange-300  dark:bg-zinc-900 rounded-lg relative'>
+          
+          <div className='absolute top-0 w-full h-full '>
             {children}
           </div>
         </main>
         <footer 
-        className='[grid-area:footer] bg-slate-600 dark:bg-zinc-900 rounded-lg w-full h-10 flex justify-between
+        className='[grid-area:footer] bg-orange-300 dark:bg-zinc-900 rounded-lg w-full h-10 flex justify-between
          place-items-center px-4'>
           <BarPlayer />
         </footer>
         </body>
+     
     </html>
   )
 }

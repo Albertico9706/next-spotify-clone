@@ -17,9 +17,10 @@ export default function PlayerInCard({playlist}:{playlist?:Playlist}){
         
     const handleClick=()=>{  
         if(!isPlayingThis){
+        const numberId=Number(playlist?.id)-1
         setCurrentMusic({
             playlist:playlist,
-            song:songs[0],
+            song:songs[numberId*5+0],
             songs:songs})
         setIsPlaying(true) }
          else{
@@ -28,7 +29,10 @@ export default function PlayerInCard({playlist}:{playlist?:Playlist}){
 
     
     return(
-        <button className={`w-12 h-12 absolute bottom-0 right-[15%] bg-green-600 rounded-full group-hover:-translate-y-12 transition duration-300 opacity-0 group-hover:opacity-100 ease-in-out`} onClick={handleClick}>
+        <button className="w-12 h-12 absolute bottom-0 right-[15%] bg-orange-400 rounded-full 
+        group-hover:-translate-y-12 transition duration-300 opacity-0 group-hover:opacity-100 ease-in-out
+        hover:text-white dark:text-black" 
+        onClick={handleClick}>
             {isPlayingThis?  <Pause/>: <div className="grid items-center justify-center   "><Play/></div>}
             </button>
     )
