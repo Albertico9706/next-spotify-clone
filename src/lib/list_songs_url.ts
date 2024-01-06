@@ -22,4 +22,9 @@ export const names=["001. Morgan Wallen - Last Night (Estudios_FTV_54321647).mp3
 "022. Morgan Wallen - Thought You Should Know (Estudios_FTV_54321647).mp3",
 "023. Kane Brown - Thank God (Estudios_FTV_54321647).mp3",
 "024. Miguel - Sure Thing (Estudios_FTV_54321647).mp3",
-"025. Lil Durk - All My Life (feat. J. Cole) (Estudios_FTV_54321647).mp3"]
+"025. Lil Durk - All My Life (feat. J. Cole) (Estudios_FTV_54321647).mp3",
+"026. Eslabon Armado - Ella Baila Sola (Estudios_FTV_54321647).mp3",
+"027. Taylor Swift - Karma (Estudios_FTV_54321647).mp3",
+"028. Lil Uzi Vert - Just Wanna Rock (Estudios_FTV_54321647).mp3",
+"029. Beyoncé - CUFF IT (Estudios_FTV_54321647).mp3",
+"030. Olivia Rodrigo - vampire (Estudios_FTV_54321647).mp3"]
