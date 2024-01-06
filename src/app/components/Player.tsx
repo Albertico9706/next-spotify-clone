@@ -10,7 +10,7 @@ import { names } from "@/lib/list_songs_url"
 
 //TODO: fix the error of the null currentMusic at the start to play
 
-export default function Player({small=false ,playlist}:{small?:boolean,playlist?:Playlist}){
+export default function Player(){
     const audioref=useRef()
     const{isPlaying,setIsPlaying,currentMusic,setCurrentMusic}=useZustandStore(state=>state)
     useEffect(()=>{
@@ -37,8 +37,10 @@ export default function Player({small=false ,playlist}:{small?:boolean,playlist?
     }
     
     return(
-        <button className={` rounded-full w-9 h-9 bg-white hover:bg-orange-300 transition relative dark:text-black`} onClick={handleClick}>
-            {small && <audio  ref={audioref}/>}
+        <button className="rounded-full w-9 h-9 bg-white hover:bg-black hover:text-white  relative 
+        dark:text-white dark:bg-orange-500 dark:hover:text-black dark:hover:bg-white transition duration-300" 
+        onClick={handleClick}>
+           <audio  ref={audioref}/>
             {isPlaying?  <Pause/>: <div className="grid items-center justify-center   "><Play/></div>}
             </button>
     )
